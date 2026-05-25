@@ -51,7 +51,9 @@ def test_load_csv_file_not_found():
 def test_load_csv_invalid_format():
     """Test that ParserError is raised for invalid CSV format."""
     with tempfile.NamedTemporaryFile(mode="w", suffix=".csv", delete=False) as f:
-        f.write("invalid\ndata\nformat\x00\n")
+        f.write("col1,col2\n")
+        f.write("value1\n")  # Missing a column - mismatch!
+        f.write("value2,value3,value4\n")  # Too many columns - mismatch!
         temp_path = f.name
 
     try:
