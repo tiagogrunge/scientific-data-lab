@@ -31,7 +31,7 @@ def load_csv(path: str) -> pd.DataFrame:
         ...
     """
     try:
-        df = pd.read_csv(path)
+        df = pd.read_csv(path, on_bad_lines='error')
         return df
     except FileNotFoundError as e:
         raise FileNotFoundError(f"File not found: {path}") from e
