@@ -61,6 +61,20 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+### 2.5. Configure Git commit template (optional)
+
+To use the conventional commit template automatically:
+
+```bash
+git config commit.template .gitmessage
+```
+
+Or globally for all repositories:
+
+```bash
+git config --global commit.template /path/to/scientific-data-lab/.gitmessage
+```
+
 ### 3. Run tests
 
 ```bash
@@ -89,10 +103,31 @@ git checkout -b feature/your-feature
 - Keep it simple and clear
 
 ### 3. **Commit and Push**
+
+We use **Conventional Commits** for clear, structured commit messages:
+
 ```bash
 git add .
-git commit -m "Add new functionality"
+git commit -m "feat(module): add new functionality"
 git push origin feature/your-feature
+```
+
+**Commit types**:
+- `feat:` - A new feature
+- `fix:` - A bug fix
+- `docs:` - Documentation changes
+- `style:` - Code style changes (formatting, missing semicolons, etc)
+- `refactor:` - Code refactoring without feature changes
+- `perf:` - Performance improvements
+- `test:` - Adding or updating tests
+- `chore:` - Build, CI, or dependency changes
+
+**Examples**:
+```bash
+git commit -m "feat(analysis): add moving_average function"
+git commit -m "fix(loader): handle missing CSV headers"
+git commit -m "docs(roadmap): update week 1 tasks"
+git commit -m "test(analysis): add parametrized statistics tests"
 ```
 
 ### 4. **Open a Pull Request**
@@ -109,6 +144,22 @@ git push origin feature/your-feature
 - After approval, merge to `main`
 - Delete the local branch: `git branch -d feature/your-feature`
 
+## Versioning Strategy
+
+We use **Semantic Versioning** (MAJOR.MINOR.PATCH):
+
+- **MAJOR** (x.0.0): Breaking API changes
+- **MINOR** (0.x.0): New features (backwards compatible)
+- **PATCH** (0.0.x): Bug fixes (backwards compatible)
+
+**Examples**:
+- v1.0.0 - Initial release
+- v1.1.0 - Added signal filtering feature
+- v1.1.1 - Fixed data loader error handling
+- v2.0.0 - Complete API redesign
+
+Versions are tagged in Git and automated from conventional commits through CI/CD.
+
 ## Quality Standards
 
 - ✨ **Docstrings**: All code must have descriptive docstrings
@@ -116,10 +167,16 @@ git push origin feature/your-feature
 - 💬 **Comments**: Only when necessary to clarify complex logic
 - ✅ **Tests**: All functionality must have unit tests
 - 🎯 **Clarity**: Simple code is better than clever code
+- 📝 **Commits**: Follow conventional commits format for clear history
+- 🏷️ **Versioning**: Use semantic versioning for releases
 
 ## Learning Roadmap
 
 See [docs/roadmap.md](docs/roadmap.md) for the complete learning plan.
+
+## Contributing
+
+For detailed guidelines on commits, versioning, and the contribution process, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Architecture
 

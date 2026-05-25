@@ -1,0 +1,37 @@
+# Conventional Commit Format
+# <type>(<scope>): <subject>
+#
+# <body>
+#
+# <footer>
+#
+# RULES:
+# - Separate subject from body with a blank line
+# - Limit the subject line to 50 characters
+# - Capitalize the subject line
+# - Do not end the subject line with a period
+# - Use imperative mood ("add feature" not "added feature")
+# - Wrap the body at 72 characters
+#
+# TYPES:
+# - feat:     A new feature
+# - fix:      A bug fix
+# - docs:     Documentation changes
+# - style:    Code style changes (formatting, etc)
+# - refactor: Code refactoring without feature changes
+# - perf:     Performance improvements
+# - test:     Adding or updating tests
+# - chore:    Build, CI, or dependency changes
+#
+# SCOPE:
+# - Optional: data_loader, analysis, signal_processing, visualization, tests, docs, etc
+#
+# EXAMPLES:
+# feat(analysis): add statistical test functions
+# fix(loader): handle missing CSV headers gracefully
+# docs(readme): update installation instructions
+# test(analysis): add parametrized statistics tests
+# refactor(visualization): simplify plot generation
+# perf(signal_processing): optimize moving_average algorithm
+#
+# The body should explain WHAT and WHY, not HOW (code shows the how)
