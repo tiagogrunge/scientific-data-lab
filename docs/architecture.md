@@ -5,7 +5,7 @@
 ```
 ┌─────────────────┐
 │   Data Source   │
-│  (CSV, Database)   │
+│  (CSV, Database)│
 └────────┬────────┘
          │
          ▼
