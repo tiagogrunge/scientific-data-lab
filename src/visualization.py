@@ -1,7 +1,7 @@
 """Module for data visualization."""
 
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
 
 
 def plot_signal(data: np.ndarray, title: str = "Signal") -> None:

@@ -68,6 +68,7 @@ notebook_shim==0.2.4
 numpy==2.4.6
 packaging==26.2
 pandas==3.0.3
+pandas-stubs==3.0.0.260204
 pandocfilters==1.5.1
 parso==0.8.7
 pathspec==1.1.1

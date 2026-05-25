@@ -67,7 +67,7 @@ def normalize(signal: np.ndarray) -> np.ndarray:
     std = np.std(signal)
 
     if std == 0:
-        return np.zeros_like(signal, dtype=float)
+        return np.zeros_like(signal, dtype=float)  # type: ignore[no-any-return]
 
     normalized = (signal - mean) / std
-    return normalized
+    return normalized  # type: ignore[no-any-return]
