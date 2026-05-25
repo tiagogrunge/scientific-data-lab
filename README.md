@@ -1,138 +1,138 @@
 # Scientific Data Lab
 
-## Propósito
+## Purpose
 
-O **Scientific Data Lab** é um projeto de aprendizagem colaborativa focado em:
+The **Scientific Data Lab** is a collaborative learning project focused on:
 
-- 🐍 **Python aplicado a dados científicos** - Aprenda a processar, analisar e visualizar dados experimentais
-- 🔗 **Git e colaboração** - Pratique Git, Pull Requests e revisão de código em um ambiente educacional
-- ✅ **Qualidade de software** - Aprenda sobre testes unitários, CI/CD, type hints e linting
-- 🧪 **Boas práticas de engenharia** - Estrutura preparada para evoluir futuramente para sistemas de instrumentação científica como NICOS
+- 🐍 **Python for scientific data** - Learn to process, analyze, and visualize experimental data
+- 🔗 **Git and collaboration** - Practice Git, Pull Requests, and code review in an educational environment
+- ✅ **Software quality** - Learn about unit tests, CI/CD, type hints, and linting
+- 🧪 **Engineering best practices** - Structure prepared to evolve into scientific instrumentation systems like NICOS
 
-## Estrutura do Projeto
+## Project Structure
 
 ```
 scientific-data-lab/
-├── README.md                 # Este arquivo
-├── docs/                     # Documentação
-│   ├── roadmap.md           # Plano de aprendizagem
-│   ├── architecture.md       # Arquitetura do sistema
-│   └── learning-notes/       # Notas de aprendizagem
-├── src/                      # Código-fonte principal
+├── README.md                 # This file
+├── docs/                     # Documentation
+│   ├── roadmap.md           # Learning roadmap
+│   ├── architecture.md       # System architecture
+│   └── learning-notes/       # Learning notes
+├── src/                      # Main source code
 │   ├── __init__.py
-│   ├── data_loader.py        # Carregamento de dados
-│   ├── signal_processing.py  # Processamento de sinais
-│   ├── analysis.py           # Análise estatística
-│   └── visualization.py      # Visualização de dados
-├── tests/                    # Testes unitários
+│   ├── data_loader.py        # Data loading
+│   ├── signal_processing.py  # Signal processing
+│   ├── analysis.py           # Statistical analysis
+│   └── visualization.py      # Data visualization
+├── tests/                    # Unit tests
 │   ├── __init__.py
 │   ├── test_loader.py
 │   └── test_analysis.py
-├── sample_data/              # Dados de exemplo
+├── sample_data/              # Sample data
 │   └── experiment_001.csv
 ├── notebooks/                # Jupyter notebooks
 │   └── exploration.ipynb
-├── .github/                  # Configuração GitHub
+├── .github/                  # GitHub configuration
 │   └── workflows/
-│       └── ci.yml            # Pipeline CI/CD
-├── requirements.txt          # Dependências Python
-├── .gitignore                # Arquivos a ignorar no Git
-└── pyproject.toml            # Configuração de ferramentas
+│       └── ci.yml            # CI/CD pipeline
+├── requirements.txt          # Python dependencies
+├── .gitignore                # Files to ignore in Git
+└── pyproject.toml            # Tools configuration
 ```
 
 ## Quick Start
 
-### 1. Configurar ambiente virtual
+### 1. Set up virtual environment
 
 ```bash
-# Criar virtual environment
+# Create virtual environment
 python -m venv .venv
 
-# Ativar (Linux/macOS)
+# Activate (Linux/macOS)
 source .venv/bin/activate
 
-# Ativar (Windows)
+# Activate (Windows)
 .venv\Scripts\activate
 ```
 
-### 2. Instalar dependências
+### 2. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Executar testes
+### 3. Run tests
 
 ```bash
 pytest
 ```
 
-### 4. Explorar o notebook
+### 4. Explore the notebook
 
 ```bash
 jupyter notebook notebooks/exploration.ipynb
 ```
 
-## Fluxo de Colaboração
+## Collaboration Workflow
 
-Siga este fluxo para contribuir com o projeto:
+Follow this workflow to contribute to the project:
 
-### 1. **Criar uma branch**
+### 1. **Create a branch**
 ```bash
-git checkout -b feature/sua-feature
-# Exemplo: git checkout -b feature/nova-analise
+git checkout -b feature/your-feature
+# Example: git checkout -b feature/new-analysis
 ```
 
-### 2. **Implementar a feature**
-- Escreva código limpo com docstrings e type hints
-- Crie testes para validar sua implementação
-- Mantenha a simplicidade e clareza
+### 2. **Implement the feature**
+- Write clean code with docstrings and type hints
+- Create tests to validate your implementation
+- Keep it simple and clear
 
-### 3. **Commit e Push**
+### 3. **Commit and Push**
 ```bash
 git add .
-git commit -m "Adiciona nova funcionalidade"
-git push origin feature/sua-feature
+git commit -m "Add new functionality"
+git push origin feature/your-feature
 ```
 
-### 4. **Abrir Pull Request**
-- Vá para o repositório no GitHub
-- Clique em "New Pull Request"
-- Descreva as mudanças e o motivo
+### 4. **Open a Pull Request**
+- Go to the repository on GitHub
+- Click "New Pull Request"
+- Describe the changes and the reason
 
-### 5. **Revisão de Código**
-- Receba feedback dos colaboradores
-- Faça ajustes conforme necessário
-- Aguarde aprovação
+### 5. **Code Review**
+- Receive feedback from collaborators
+- Make adjustments as needed
+- Wait for approval
 
 ### 6. **Merge**
-- Após aprovação, faça merge para `main`
-- Delete a branch local: `git branch -d feature/sua-feature`
+- After approval, merge to `main`
+- Delete the local branch: `git branch -d feature/your-feature`
 
-## Padrões de Qualidade
+## Quality Standards
 
-- ✨ **Docstrings**: Todo código deve ter docstrings descritivas
-- 🏷️ **Type Hints**: Todos os parâmetros e retornos devem ter type hints
-- 💬 **Comentários**: Apenas quando necessários para esclarecer lógica complexa
-- ✅ **Testes**: Toda funcionalidade deve ter testes unitários
-- 🎯 **Clareza**: Código simples é melhor que código inteligente
+- ✨ **Docstrings**: All code must have descriptive docstrings
+- 🏷️ **Type Hints**: All parameters and returns must have type hints
+- 💬 **Comments**: Only when necessary to clarify complex logic
+- ✅ **Tests**: All functionality must have unit tests
+- 🎯 **Clarity**: Simple code is better than clever code
 
-## Roadmap de Aprendizagem
+## Learning Roadmap
 
-Consulte [docs/roadmap.md](docs/roadmap.md) para o plano completo de aprendizagem.
+See [docs/roadmap.md](docs/roadmap.md) for the complete learning plan.
 
-## Arquitetura
+## Architecture
 
-Para entender como os módulos se conectam, leia [docs/architecture.md](docs/architecture.md).
+To understand how modules connect, read [docs/architecture.md](docs/architecture.md).
 
-## Dependências Principais
+## Main Dependencies
 
-- **pandas** - Manipulação e análise de dados
-- **numpy** - Computação numérica
-- **matplotlib** - Visualização de dados
-- **pytest** - Framework de testes
-- **jupyter** - Notebooks interativos
+- **pandas** - Data manipulation and analysis
+- **numpy** - Numerical computation
+- **matplotlib** - Data visualization
+- **pytest** - Testing framework
+- **jupyter** - Interactive notebooks
 
-## Licença
+## License
 
 MIT

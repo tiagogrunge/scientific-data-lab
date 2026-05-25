@@ -1,166 +1,166 @@
-# Roadmap de Aprendizagem
+# Learning Roadmap
 
-## Visão Geral
+## Overview
 
-Estrutura de 6 semanas focada em construir habilidades progressivas em Python, ciência de dados e engenharia de software.
+A 6-week structure focused on building progressive skills in Python, data science, and software engineering.
 
 ---
 
-## Semana 1: Fundações
+## Week 1: Foundations
 
-### Objetivos
-- Dominar Git e workflow colaborativo
-- Revisar Python básico
-- Aprender manipulação de arquivos CSV
+### Objectives
+- Master Git and collaborative workflow
+- Review basic Python
+- Learn CSV file manipulation
 
-### Tarefas
-- [ ] Clonar repositório e configurar ambiente local
-- [ ] Revisar branches, commits e Pull Requests
-- [ ] Implementar `data_loader.py` para leitura de CSV com pandas
-- [ ] Criar testes básicos para carregamento de dados
-- [ ] Documentar estrutura de dados no notebook
+### Tasks
+- [ ] Clone repository and set up local environment
+- [ ] Review branches, commits, and Pull Requests
+- [ ] Implement `data_loader.py` for CSV reading with pandas
+- [ ] Create basic tests for data loading
+- [ ] Document data structure in notebook
 
-### Conceitos-chave
+### Key Concepts
 - Virtual environments
-- Importações Python
-- Tipos de dados (listas, dicionários, DataFrames)
+- Python imports
+- Data types (lists, dictionaries, DataFrames)
 - CSV parsing
 
 ---
 
-## Semana 2: Testes e Qualidade
+## Week 2: Testing and Quality
 
-### Objetivos
-- Aprender pytest
-- Escrever testes unitários
-- Garantir cobertura de código
+### Objectives
+- Learn pytest
+- Write unit tests
+- Ensure code coverage
 
-### Tarefas
-- [ ] Estudar pytest fixtures e assertions
-- [ ] Expandir suite de testes
-- [ ] Implementar testes parametrizados
-- [ ] Configurar relatório de cobertura
+### Tasks
+- [ ] Study pytest fixtures and assertions
+- [ ] Expand test suite
+- [ ] Implement parametrized tests
+- [ ] Configure coverage report
 
-### Conceitos-chave
+### Key Concepts
 - Unit tests
 - Test fixtures
 - Mocking
-- Cobertura de código
+- Code coverage
 
 ---
 
-## Semana 3: Qualidade de Código
+## Week 3: Code Quality
 
-### Objetivos
-- Aprender linting e formatação
-- Validação de tipos
-- Padrões de código
+### Objectives
+- Learn linting and formatting
+- Type validation
+- Code patterns
 
-### Tarefas
-- [ ] Configurar Ruff para linting
-- [ ] Executar Ruff em todo o código
-- [ ] Configurar Mypy para type checking
-- [ ] Corrigir warnings de tipo
-- [ ] Documentar style guide do projeto
+### Tasks
+- [ ] Configure Ruff for linting
+- [ ] Run Ruff across all code
+- [ ] Configure Mypy for type checking
+- [ ] Fix type warnings
+- [ ] Document project style guide
 
-### Conceitos-chave
-- PEP 8 e PEP 484
+### Key Concepts
+- PEP 8 and PEP 484
 - Static type checking
 - Code linting
 - Pre-commit hooks
 
 ---
 
-## Semana 4: Processamento de Sinais
+## Week 4: Signal Processing
 
-### Objetivos
-- Implementar algoritmos de processamento
-- Usar NumPy eficientemente
-- Validar resultados matemáticos
+### Objectives
+- Implement processing algorithms
+- Use NumPy efficiently
+- Validate mathematical results
 
-### Tarefas
-- [ ] Implementar `moving_average()` em signal_processing.py
-- [ ] Implementar `normalize()` com NumPy
-- [ ] Adicionar testes para funções matemáticas
-- [ ] Criar visualizações dos resultados
+### Tasks
+- [ ] Implement `moving_average()` in signal_processing.py
+- [ ] Implement `normalize()` with NumPy
+- [ ] Add tests for mathematical functions
+- [ ] Create visualizations of results
 
-### Conceitos-chave
-- Operações NumPy
-- Janelas deslizantes (sliding windows)
-- Normalização de dados
-- Operações vetorizadas
-
----
-
-## Semana 5: Análise e Visualização
-
-### Objetivos
-- Implementar análises estatísticas
-- Criar visualizações efetivas
-- Interpretar resultados
-
-### Tarefas
-- [ ] Implementar `calculate_statistics()` em analysis.py
-- [ ] Implementar `plot_signal()` em visualization.py
-- [ ] Criar visualizações interativas no notebook
-- [ ] Adicionar testes para cálculos estatísticos
-
-### Conceitos-chave
-- Estatística descritiva
-- Matplotlib e plots
-- Interpretação de gráficos
-- Boas práticas de visualização
+### Key Concepts
+- NumPy operations
+- Sliding windows
+- Data normalization
+- Vectorized operations
 
 ---
 
-## Semana 6: CI/CD e Deployment
+## Week 5: Analysis and Visualization
 
-### Objetivos
-- Configurar integração contínua
-- Automatizar testes
-- Aprender GitHub Actions
+### Objectives
+- Implement statistical analysis
+- Create effective visualizations
+- Interpret results
 
-### Tarefas
-- [ ] Configurar `.github/workflows/ci.yml`
-- [ ] Executar testes automaticamente em PRs
-- [ ] Configurar badge de status no README
-- [ ] Documentar processo de deploy
+### Tasks
+- [ ] Implement `calculate_statistics()` in analysis.py
+- [ ] Implement `plot_signal()` in visualization.py
+- [ ] Create interactive visualizations in notebook
+- [ ] Add tests for statistical calculations
 
-### Conceitos-chave
+### Key Concepts
+- Descriptive statistics
+- Matplotlib and plots
+- Graph interpretation
+- Visualization best practices
+
+---
+
+## Week 6: CI/CD and Deployment
+
+### Objectives
+- Configure continuous integration
+- Automate tests
+- Learn GitHub Actions
+
+### Tasks
+- [ ] Configure `.github/workflows/ci.yml`
+- [ ] Run tests automatically on PRs
+- [ ] Configure status badge in README
+- [ ] Document deployment process
+
+### Key Concepts
 - GitHub Actions
 - CI/CD pipelines
-- Automatização de testes
-- Best practices em deployment
+- Test automation
+- Deployment best practices
 
 ---
 
-## Próximas Etapas (Semana 7+)
+## Next Steps (Week 7+)
 
-### Possíveis extensões
-- Integração com instrumentos reais
-- Arquitetura em tempo real
-- Sistema de cache e persistência
-- Logging e monitoramento
-- API REST para acesso aos dados
-- Containerização com Docker
+### Possible Extensions
+- Integration with real instruments
+- Real-time architecture
+- Caching and persistence system
+- Logging and monitoring
+- REST API for data access
+- Docker containerization
 
-### Evolução para NICOS
-- Este projeto é preparado para evoluir para um sistema similar ao NICOS (Network-based Instrument Control System)
-- Estrutura modular permite adicionar controle de instrumentos
-- Testes garantem confiabilidade para ambientes experimentais
+### Evolution to NICOS
+- This project is prepared to evolve into a system similar to NICOS (Network-based Instrument Control System)
+- Modular structure allows adding instrument control
+- Tests ensure reliability for experimental environments
 
 ---
 
-## Recursos Adicionais
+## Additional Resources
 
-### Documentação Recomendada
+### Recommended Documentation
 - [Real Python - Data Science](https://realpython.com)
 - [Pandas Documentation](https://pandas.pydata.org)
 - [NumPy User Guide](https://numpy.org/doc)
 - [Pytest Documentation](https://docs.pytest.org)
 
-### Práticas de Colaboração
-- Sempre criar uma branch para novas features
-- Abrir PR para revisão antes de merge
-- Escrever commits claros e descritivos
-- Revisar código dos colegas com construtividade
+### Collaboration Practices
+- Always create a branch for new features
+- Open PR for review before merge
+- Write clear and descriptive commits
+- Review colleagues' code constructively

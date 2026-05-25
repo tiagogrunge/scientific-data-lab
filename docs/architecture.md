@@ -1,11 +1,11 @@
-# Arquitetura do Sistema
+# System Architecture
 
-## Fluxo de Dados
+## Data Flow
 
 ```
 ┌─────────────────┐
 │   Data Source   │
-│  (CSV, banco)   │
+│  (CSV, Database)   │
 └────────┬────────┘
          │
          ▼
@@ -33,21 +33,21 @@
 └─────────────────┘
 ```
 
-## Módulos Principais
+## Main Modules
 
 ### 1. **data_loader.py**
 
-**Responsabilidade**: Carregar e validar dados de fontes externas
+**Responsibility**: Load and validate data from external sources
 
-**Funções principais**:
-- `load_csv(path: str) -> pd.DataFrame` - Carrega arquivo CSV
+**Main functions**:
+- `load_csv(path: str) -> pd.DataFrame` - Loads CSV file
 
-**Características**:
-- Validação básica de formato
-- Tratamento de erros
-- Type hints completos
+**Features**:
+- Basic format validation
+- Error handling
+- Complete type hints
 
-**Exemplo**:
+**Example**:
 ```python
 from src.data_loader import load_csv
 
@@ -59,18 +59,18 @@ print(df.head())
 
 ### 2. **signal_processing.py**
 
-**Responsabilidade**: Processar sinais crus, filtrar e transformar dados
+**Responsibility**: Process raw signals, filter and transform data
 
-**Funções principais**:
+**Main functions**:
 - `moving_average(signal: np.ndarray, window_size: int) -> np.ndarray`
 - `normalize(signal: np.ndarray) -> np.ndarray`
 
-**Características**:
-- Operações vetorizadas com NumPy
-- Eficiente para grandes datasets
-- Documentação clara de algoritmos
+**Features**:
+- Vectorized operations with NumPy
+- Efficient for large datasets
+- Clear algorithm documentation
 
-**Exemplo**:
+**Example**:
 ```python
 from src.signal_processing import moving_average, normalize
 
@@ -85,23 +85,23 @@ normalized = normalize(smoothed)
 
 ### 3. **analysis.py**
 
-**Responsabilidade**: Calcular estatísticas e métricas dos dados
+**Responsibility**: Calculate statistics and metrics of the data
 
-**Funções principais**:
+**Main functions**:
 - `calculate_statistics(data: np.ndarray) -> dict`
 
-**Retorna**:
-- `mean` - Média aritmética
-- `std` - Desvio padrão
-- `min` - Valor mínimo
-- `max` - Valor máximo
+**Returns**:
+- `mean` - Arithmetic mean
+- `std` - Standard deviation
+- `min` - Minimum value
+- `max` - Maximum value
 
-**Características**:
-- Cálculos estatísticos descritivos
-- Retorna dicionário para fácil acesso
-- Type hints e docstrings
+**Features**:
+- Descriptive statistical calculations
+- Returns dictionary for easy access
+- Type hints and docstrings
 
-**Exemplo**:
+**Example**:
 ```python
 from src.analysis import calculate_statistics
 
@@ -109,25 +109,25 @@ import numpy as np
 
 data = np.array([1, 2, 3, 4, 5])
 stats = calculate_statistics(data)
-print(f"Média: {stats['mean']}")
-print(f"Desvio padrão: {stats['std']}")
+print(f"Mean: {stats['mean']}")
+print(f"Standard deviation: {stats['std']}")
 ```
 
 ---
 
 ### 4. **visualization.py**
 
-**Responsabilidade**: Criar gráficos e visualizações dos dados
+**Responsibility**: Create graphs and data visualizations
 
-**Funções principais**:
+**Main functions**:
 - `plot_signal(data: np.ndarray, title: str = "Signal") -> None`
 
-**Características**:
-- Usa Matplotlib para gráficos
-- Configurações sensatas por padrão
-- Fácil customização
+**Features**:
+- Uses Matplotlib for graphs
+- Sensible defaults
+- Easy customization
 
-**Exemplo**:
+**Example**:
 ```python
 from src.visualization import plot_signal
 
@@ -139,38 +139,38 @@ plot_signal(signal, title="Sine Wave")
 
 ---
 
-## Fluxo de Uso Típico
+## Typical Usage Flow
 
-### Explorativo (Notebook)
+### Exploratory (Notebook)
 ```python
-# 1. Carregar dados
+# 1. Load data
 df = load_csv("sample_data/experiment_001.csv")
 
-# 2. Processar sinais
+# 2. Process signals
 signal = df['signal'].values
 smoothed = moving_average(signal, window_size=5)
 
-# 3. Analisar
+# 3. Analyze
 stats = calculate_statistics(smoothed)
 
-# 4. Visualizar
+# 4. Visualize
 plot_signal(smoothed, title="Processed Signal")
 print(stats)
 ```
 
-### Produtivo (Aplicação)
+### Production (Application)
 ```python
 def process_experiment(csv_path: str) -> dict:
-    """Pipeline completo de processamento."""
-    # Carregar
+    """Complete processing pipeline."""
+    # Load
     df = load_csv(csv_path)
     signal = df['signal'].values
     
-    # Processar
+    # Process
     normalized = normalize(signal)
     smoothed = moving_average(normalized, window_size=3)
     
-    # Analisar
+    # Analyze
     results = calculate_statistics(smoothed)
     
     return results
@@ -178,26 +178,26 @@ def process_experiment(csv_path: str) -> dict:
 
 ---
 
-## Decisões de Design
+## Design Decisions
 
 ### 1. **NumPy vs Pandas**
-- Use **NumPy** para processamento de sinais (mais rápido)
-- Use **Pandas** para carregamento e manipulação de dados estruturados
+- Use **NumPy** for signal processing (faster)
+- Use **Pandas** for loading and manipulating structured data
 
 ### 2. **Type Hints**
-- Todos os parâmetros e retornos têm type hints
-- Permite detecção de erros com Mypy
-- Melhora documentação e autocompletar
+- All parameters and returns have type hints
+- Allows error detection with Mypy
+- Improves documentation and autocomplete
 
 ### 3. **Docstrings**
-- Cada função tem docstring descritiva
-- Inclui parâmetros, retorno e exemplos quando relevante
-- Formato: Google-style docstrings
+- Each function has a descriptive docstring
+- Includes parameters, return value, and examples when relevant
+- Format: Google-style docstrings
 
-### 4. **Modularidade**
-- Cada módulo tem responsabilidade clara
-- Funções puras (sem side effects quando possível)
-- Fácil de testar isoladamente
+### 4. **Modularity**
+- Each module has clear responsibility
+- Pure functions (no side effects when possible)
+- Easy to test in isolation
 
 ---
 
